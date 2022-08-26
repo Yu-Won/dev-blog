@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import type { ReactElement, ReactNode } from "react";
 import { MDXProvider } from '@mdx-js/react';
 import "styles/global.css"
+import Layout from "../components/Layout";
 
 // import {Header} from '../components/Header.js'
 
@@ -21,7 +22,9 @@ type AppPropsWithLayout = AppProps & {
 const uonDevBlogApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <MDXProvider components={components}>
-      <Component {...pageProps} />
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
     </MDXProvider>
   )
 };

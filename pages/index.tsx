@@ -1,9 +1,7 @@
-import type { NextPageWithLayout } from "./_app";
-
-const HomePage: NextPageWithLayout = () => {
+const Home = () => {
     return (
-        <div className="flex">hello word</div>
-    );
+        <>테스트</>
+    )
 };
 
-export default HomePage;
+export default Home;

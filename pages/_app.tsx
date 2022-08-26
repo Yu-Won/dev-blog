@@ -1,7 +1,9 @@
 import type { AppProps } from "next/app";
 import type { NextPage } from 'next'
 import type { ReactElement, ReactNode } from "react";
-import { MDXProvider } from '@mdx-js/react'
+import { MDXProvider } from '@mdx-js/react';
+import "styles/global.css"
+
 // import {Header} from '../components/Header.js'
 
 const components = {

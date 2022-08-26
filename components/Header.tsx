@@ -1,11 +1,8 @@
-import Sidebar from "./Sidebar";
-
 const Header = () => {
     return (
-        <>
-            <Sidebar />
+        <header className="mobile:flex laptop:hidden h-14 shadow">
             <>로고</>
-        </>
+        </header>
     )
 };
 

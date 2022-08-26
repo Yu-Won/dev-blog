@@ -1,6 +1,10 @@
+import Gnb from "./Gnb";
+
 const Footer = () => {
     return (
-        <>Footer test</>
+        <footer className="mobile:flex laptop:hidden">
+            <Gnb />
+        </footer>
     )
 };
 

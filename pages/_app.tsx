@@ -5,8 +5,6 @@ import { MDXProvider } from '@mdx-js/react';
 import "styles/global.css"
 import Layout from "../components/Layout";
 
-// import {Header} from '../components/Header.js'
-
 const components = {
   // h1: Header
 };

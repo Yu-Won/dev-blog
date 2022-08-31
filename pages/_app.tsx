@@ -1,12 +1,17 @@
 import type { AppProps } from "next/app";
 import type { NextPage } from 'next'
+import Image from "next/image";
 import type { ReactElement, ReactNode } from "react";
 import { MDXProvider } from '@mdx-js/react';
 import "styles/global.css"
 import Layout from "../components/Layout";
 
+const ResponsiveImage = (props: any) => (
+    <Image alt={props.alt} layout="responsive" {...props} />
+);
+
 const components = {
-  // h1: Header
+  img: ResponsiveImage
 };
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -17,7 +22,7 @@ type AppPropsWithLayout = AppProps & {
     Component: NextPageWithLayout
 };
 
-const uonDevBlogApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+const uonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <MDXProvider components={components}>
         <Layout>
@@ -27,4 +32,4 @@ const uonDevBlogApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   )
 };
 
-export default uonDevBlogApp;
+export default uonDevBlog;

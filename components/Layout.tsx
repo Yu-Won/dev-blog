@@ -9,7 +9,9 @@ const Layout = ({ children }: { children: ReactElement }) => {
         <div className="flex mobile:flex-col laptop:flex-row w-screen h-screen">
             <Header />
             <Sidebar />
-            <main>{children}</main>
+            <main className="w-full">
+                {children}
+            </main>
             <About />
             <Footer />
         </div>

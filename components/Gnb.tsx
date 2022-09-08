@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 const Gnb = () => {
     return (
         <ul className="flex laptop:flex-col mx-auto mobile:w-3/5 mobile:justify-evenly laptop:h-3/5 items-center">
@@ -7,7 +11,7 @@ const Gnb = () => {
                     href="mailto:shallwedance0419@gmail.com"
                     rel="noreferrer"
                 >
-                    메일
+                    <FontAwesomeIcon icon={faEnvelope} size="xl" />
                 </a>
             </li>
             <li className="flex mx-auto">
@@ -16,7 +20,7 @@ const Gnb = () => {
                     href="https://github.com/Yu-Won"
                     rel="noreferrer"
                 >
-                    깃허브
+                    <FontAwesomeIcon icon={faGithub} size="xl" />
                 </a>
             </li>
             <li className="flex mx-auto">
@@ -25,7 +29,7 @@ const Gnb = () => {
                     href="https://github.com/Yu-Won"
                     rel="noreferrer"
                 >
-                    링크드인
+                    <FontAwesomeIcon icon={faLinkedin} size="xl" />
                 </a>
             </li>
         </ul>

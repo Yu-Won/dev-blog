@@ -2,6 +2,7 @@ import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { getAllPosts, parseMarkdownToMdx } from "../../utils/mdxUtils";
+import { Post } from "../../types";
 
 interface SlugInterface {
   [key: string]: string | string[] | undefined
@@ -9,13 +10,20 @@ interface SlugInterface {
   slugs: string[]
 }
 
-const PostPage = (props: any) => {
-    const { post, mdx } = props;
+const PostPage = ({ post, mdx }: { post: Post, mdx: MDXRemoteSerializeResult }) => {
+    const { title, tags, published, date, description } = post.frontMatter;
+
     return (
         <>
             <Head>
-                <meta name="description" />
-                <title>test</title>
+                <meta name="title" content={title} />
+                {tags.map((tag) => (
+                    <meta key={tag} name="keywords" content={tag} />
+                ))}
+                <meta
+                    name="description"
+                    content={description}
+                />
             </Head>
             <MDXRemote {...mdx} />
         </>

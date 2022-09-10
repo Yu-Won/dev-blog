@@ -2,8 +2,8 @@ import Gnb from "./Gnb";
 
 const Sidebar = () => {
     return (
-        <aside className="mobile:hidden laptop:flex w-20 border-r flex-col text-center justify-evenly">
-            <div>로고</div>
+        <aside className="mobile:hidden laptop:flex w-20 h-screen flex-col text-center justify-evenly">
+            <div>uon</div>
             <Gnb />
         </aside>
     )

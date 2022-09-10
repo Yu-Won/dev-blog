@@ -3,8 +3,11 @@ import type { NextPage } from 'next'
 import Image from "next/image";
 import type { ReactElement, ReactNode } from "react";
 import { MDXProvider } from '@mdx-js/react';
+import { ThemeProvider } from "next-themes";
+import { DefaultSeo } from "next-seo";
 import "styles/global.css"
-import Layout from "../components/Layout";
+import { SEO } from "components/SEO"
+import Layout from "components/Layout";
 
 const ResponsiveImage = (props: any) => (
     <Image alt={props.alt} layout="responsive" {...props} />
@@ -24,11 +27,14 @@ type AppPropsWithLayout = AppProps & {
 
 const uonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
-    <MDXProvider components={components}>
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    </MDXProvider>
+        <ThemeProvider attribute="class">
+            <DefaultSeo {...SEO} />
+            <MDXProvider components={components}>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </MDXProvider>
+        </ThemeProvider>
   )
 };
 

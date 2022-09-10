@@ -1,13 +1,22 @@
+import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
+    const { theme, setTheme } = useTheme();
     return (
-        <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between bg-white">
-            <div className="px-9">로고</div>
-            <div className="px-9">
-                <FontAwesomeIcon className="cursor-pointer" icon={faMoon} size="xl" />
-            </div>
+        <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
+            <div className="px-9">uon</div>
+            <button
+                className="px-9 cursor-pointer"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+                {
+                    theme === "dark" ?
+                        <FontAwesomeIcon icon={faMoon} size="xl" />
+                        : <FontAwesomeIcon icon={faSun} size="xl" />
+                }
+            </button>
         </header>
     )
 };

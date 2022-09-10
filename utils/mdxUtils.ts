@@ -96,8 +96,6 @@ export const getAllPosts = async (): Promise<Post[]> => {
       }
       return 0
     });
-    console.log("get All posts", posts);
-
     return posts;
 };
 

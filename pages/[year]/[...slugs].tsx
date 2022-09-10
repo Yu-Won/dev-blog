@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { getAllPosts, parseMarkdownToMdx } from "../../utils/mdxUtils";
-import { Post } from "../../types";
+import { getAllPosts, parseMarkdownToMdx } from "utils/mdxUtils";
+import { Post } from "types";
 
 interface SlugInterface {
   [key: string]: string | string[] | undefined
@@ -14,7 +14,7 @@ const PostPage = ({ post, mdx }: { post: Post, mdx: MDXRemoteSerializeResult }) 
     const { title, tags, published, date, description } = post.frontMatter;
 
     return (
-        <>
+        <div className="py-16 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center">
             <Head>
                 <meta name="title" content={title} />
                 {tags.map((tag) => (
@@ -26,7 +26,7 @@ const PostPage = ({ post, mdx }: { post: Post, mdx: MDXRemoteSerializeResult }) 
                 />
             </Head>
             <MDXRemote {...mdx} />
-        </>
+        </div>
     )
 };
 

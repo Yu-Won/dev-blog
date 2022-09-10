@@ -56,7 +56,6 @@ function parseCodeSnippet() {
 
 export const getAllPosts = async (): Promise<Post[]> => {
     const files = sync(`${POSTS_PATH}/**/*.md*`).reverse();
-    console.log("files", files);
       const posts = files.reduce<Post[]>((prev, path) => {
       const file = fs.readFileSync(path, { encoding: 'utf8' });
       const { attributes, body } = frontMatter<FrontMatter>(file);

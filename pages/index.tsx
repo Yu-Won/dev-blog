@@ -1,12 +1,14 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { getAllPosts } from "utils/mdxUtils";
+import TagContainer from "components/TagContainer";
 import { Post } from "types";
 import dayjs from "dayjs";
 
 const Home = ({ posts }: { posts: Post[] }) => {
     return (
-        <div className="w-full">
+        <div className="flex flex-col w-full">
+            <TagContainer />
             <ul>
                 {posts
                     .slice(0, 10)

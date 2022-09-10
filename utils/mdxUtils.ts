@@ -99,7 +99,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
     return posts;
 };
 
-export const getAllTagsFromPosts = async (): Promise<Array<any>> => {
+export const getAllTagsFromPosts = async (): Promise<TagWithCount[]> => {
     const tags: string[] = (await getAllPosts()).reduce<string[]>((prev: string[], cur: Post) => {
         cur.frontMatter.tags.forEach((tag: string) => {
             prev.push(tag)

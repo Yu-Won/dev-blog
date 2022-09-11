@@ -1,14 +1,20 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import { getAllPosts } from "utils/mdxUtils";
+import { getAllPosts, getAllTagsFromPosts } from "utils/mdxUtils";
 import TagContainer from "components/TagContainer";
-import { Post } from "types";
+import { Post, TagWithCount } from "types";
 import dayjs from "dayjs";
 
-const Home = ({ posts }: { posts: Post[] }) => {
+interface IProps {
+    posts: Post[],
+    tags: TagWithCount[]
+}
+
+const Home = (props: IProps) => {
+    const { posts, tags } = props;
     return (
         <div className="flex flex-col w-full">
-            <TagContainer />
+            <TagContainer tags={tags} />
             <ul>
                 {posts
                     .slice(0, 10)
@@ -54,8 +60,12 @@ const Home = ({ posts }: { posts: Post[] }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
     const recentPosts = (await getAllPosts()).slice(0, 10);
+    const allTags = await getAllTagsFromPosts();
     return {
-        props: { posts: recentPosts.map((post) => ({ ...post, path: '' })) }
+        props: {
+            posts: recentPosts.map((post) => ({ ...post, path: '' })),
+            tags: allTags
+        }
     };
 };
 

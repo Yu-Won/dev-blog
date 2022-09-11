@@ -1,11 +1,12 @@
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import Introduce from "./Introduce";
 
 const About = () => {
     const { theme, setTheme } = useTheme();
     return (
-        <div className="mobile:hidden laptop:flex w-72 ml-auto flex-col">
+        <div className="mobile:hidden laptop:flex w-72 ml-auto flex-col py-12">
             <button
                 className="cursor-pointer"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -16,8 +17,7 @@ const About = () => {
                         : <FontAwesomeIcon icon={faSun} size="xl" />
                 }
             </button>
-            <div>자기소개</div>
-            <div>태그</div>
+            <Introduce />
         </div>
     )
 };

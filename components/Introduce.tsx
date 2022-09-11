@@ -4,7 +4,7 @@ const Introduce = () => {
     return (
         <div className="flex flex-col text-center py-8">
             <p>Hello World 👋</p>
-            <p>I`m frontend engineer</p>
+            <p>I&apos;m frontend engineer</p>
             <div className="py-4">
                 <Image
                     className="rounded-full"

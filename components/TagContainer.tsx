@@ -7,7 +7,6 @@ interface IProps {
 
 const TagContainer = (props: IProps) => {
     const { tags } = props;
-    // border-b border-violet-200 dark:border-indigo-500
     return (
         <div className="flex mx-auto w-9/12 mobile:pt-12 tablet:pt-24 border-b dark:border-zinc-500">
             <ul className="flex w-full overflow-x-scroll whitespace-nowrap float-left space-x-6">

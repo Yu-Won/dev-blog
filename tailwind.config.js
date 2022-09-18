@@ -1,16 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  purge: {
-    enabled: true,
-    content: [
+  content: [
       "./pages/**/*.{js,ts,jsx,tsx}",
       "./components/**/*.{js,ts,jsx,tsx}",
     ],
-    options: {
-      safelist: ["dark"],
-    },
-  },
   theme: {
     fontFamily: {
       sans: ["Roboto", "sans-serif"]

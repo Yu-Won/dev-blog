@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from "fs";
 import { sync } from "glob";
 import frontMatter from "front-matter";
 import { serialize } from "next-mdx-remote/serialize";
@@ -11,10 +11,10 @@ import rehypeKatex from "rehype-katex";
 import prism from "rehype-prism-plus";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-import { FrontMatter, Post, TagWithCount } from "../types"
+import {FrontMatter, Post, TagWithCount} from "../types";
 
-const DIR_REPLACE_STRING = "/posts"
-export const POSTS_PATH =`${process.cwd()}${DIR_REPLACE_STRING}`
+const DIR_REPLACE_STRING = "/posts";
+export const POSTS_PATH =`${process.cwd()}${DIR_REPLACE_STRING}`;
 
 type TokenType =
   | 'tag'
@@ -41,23 +41,23 @@ const tokenClassNames: { [key in TokenType]: string } = {
   function: 'text-code-blue',
   boolean: 'text-code-red',
   comment: 'text-gray-400 italic',
-} as const
+} as const;
 
 function parseCodeSnippet() {
   return (tree: any) => {
     visit(tree, 'element', (node: any) => {
-      const [token, type]: [string, TokenType] = node.properties.className || []
+      const [token, type]: [string, TokenType] = node.properties.className || [];
       if (token === 'token') {
-        node.properties.className = [tokenClassNames[type]]
+        node.properties.className = [tokenClassNames[type]];
       }
-    })
-  }
+    });
+  };
 }
 
 export const getAllPosts = async (): Promise<Post[]> => {
     const files = sync(`${POSTS_PATH}/**/*.md*`).reverse();
-      const posts = files.reduce<Post[]>((prev, path) => {
-      const file = fs.readFileSync(path, { encoding: 'utf8' });
+    return files.reduce<Post[]>((prev, path) => {
+      const file = fs.readFileSync(path, {encoding: 'utf8'});
       const { attributes, body } = frontMatter<FrontMatter>(file);
       const fm: FrontMatter = attributes;
       const { tags: fmTags, published, date } = fm;
@@ -65,7 +65,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
       const slug = path
         .slice(path.indexOf(DIR_REPLACE_STRING) + DIR_REPLACE_STRING.length + 1)
         .replace('.mdx', '')
-        .replace('.md', '')
+        .replace('.md', '');
 
       if (published) {
         const tags: string[] = (fmTags || []).map((tag: string) => tag.trim());
@@ -81,27 +81,26 @@ export const getAllPosts = async (): Promise<Post[]> => {
             slug,
           },
           path,
-        }
-        prev.push(result)
+        };
+          prev.push(result);
       }
-      return prev
+        return prev;
     }, [])
-    .sort((a, b) => {
-      if (a.frontMatter.date < b.frontMatter.date) {
-        return 1
-      }
-      if (a.frontMatter.date > b.frontMatter.date) {
-        return -1
-      }
-      return 0
-    });
-    return posts;
+      .sort((a, b) => {
+        if (a.frontMatter.date < b.frontMatter.date) {
+          return 1;
+        }
+        if (a.frontMatter.date > b.frontMatter.date) {
+          return -1;
+        }
+          return 0;
+      });
 };
 
 export const getAllTagsFromPosts = async (): Promise<TagWithCount[]> => {
     const tags: string[] = (await getAllPosts()).reduce<string[]>((prev: string[], cur: Post) => {
         cur.frontMatter.tags.forEach((tag: string) => {
-            prev.push(tag)
+            prev.push(tag);
         });
         return prev;
     }, []);

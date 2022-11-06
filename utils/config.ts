@@ -6,15 +6,20 @@ export const SiteConfig = {
     copyright: "uon © All rights reserved.",
     disqusShortname: "",
     googleAnalyticsId: "",
-    menu: [],
+    menu: [
+      {
+        label: "Tags",
+        path: "/tags"
+      }
+    ],
     author: {
-        name: "uon",
-        photo: "",
-        bio: "frontend engineer",
-        contacts: {
-            email: "shallwedance0419@gmail.com",
-            github: "https://github.com/Yu-Won",
-            linkedin: ""
-        }
+      name: "uon",
+      photo: "",
+      bio: "frontend engineer",
+      contacts: {
+        email: "shallwedance0419@gmail.com",
+        github: "https://github.com/Yu-Won",
+        linkedin: ""
+      }
     }
 };

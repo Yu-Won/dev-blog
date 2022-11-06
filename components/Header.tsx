@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { MoonIcon } from "@heroicons/react/24/solid";
+import { SunIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
     const { theme, setTheme } = useTheme();
@@ -8,13 +8,13 @@ const Header = () => {
         <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
             <div className="px-9">uon</div>
             <button
-                className="px-9 cursor-pointer"
+                className="flex px-9 cursor-pointer"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
                 {
                     theme === "dark" ?
-                        <FontAwesomeIcon icon={faMoon} size="xl" />
-                        : <FontAwesomeIcon icon={faSun} size="xl" />
+                        <MoonIcon className="w-6 h-6" />
+                        : <SunIcon className="w-6 h-6" />
                 }
             </button>
         </header>

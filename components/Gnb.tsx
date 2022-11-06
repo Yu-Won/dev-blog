@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const Gnb = () => {
     return (
@@ -11,7 +11,7 @@ const Gnb = () => {
                     href="mailto:shallwedance0419@gmail.com"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon icon={faEnvelope} size="xl" />
+                    <EnvelopeIcon className="w-6 h-6" />
                 </a>
             </li>
             <li className="flex mx-auto">

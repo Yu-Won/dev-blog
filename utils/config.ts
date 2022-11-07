@@ -1,9 +1,9 @@
 export const SiteConfig = {
-    url: "https://uon.xyz",
+    url: "https://Yu-Won.xyz",
     pathPrefix: "/",
-    title: "uon dev-blog",
+    title: "Yu-Won dev-blog",
     subtitle: "dev-blog",
-    copyright: "uon © All rights reserved.",
+    copyright: "Yu-Won © All rights reserved.",
     disqusShortname: "",
     googleAnalyticsId: "",
     menu: [
@@ -13,8 +13,8 @@ export const SiteConfig = {
       }
     ],
     author: {
-      name: "uon",
-      photo: "",
+      name: "Yu-Won",
+      photo: "/public/images/profile.jpeg",
       bio: "frontend engineer",
       contacts: {
         email: "shallwedance0419@gmail.com",

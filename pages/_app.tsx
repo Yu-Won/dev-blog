@@ -25,7 +25,7 @@ type AppPropsWithLayout = AppProps & {
     Component: NextPageWithLayout;
 };
 
-const uonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
+const yuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <ThemeProvider attribute="class">
       <DefaultSeo {...SEO} />
@@ -38,4 +38,4 @@ const uonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
   );
 };
 
-export default uonDevBlog;
+export default yuWonDevBlog;

@@ -6,7 +6,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
     <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
-      <div className="px-9">uon</div>
+      <div className="px-9">Yu-Won</div>
         <button
           className="flex px-9 cursor-pointer"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

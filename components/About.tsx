@@ -1,10 +1,19 @@
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { SunIcon } from "@heroicons/react/24/outline";
 import Introduce from "./Introduce";
 
 const About = () => {
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if(!mounted) return null;
+
   return (
     <div className="mobile:hidden laptop:flex w-72 ml-auto flex-col py-12">
       <button

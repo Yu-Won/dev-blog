@@ -6,7 +6,7 @@ tags:
   - jetbrains
 published: true
 date: 2022-09-01 00:10:44
-description: "돈 받고 파는데 이래도 되나..."
+description: "오류를 해결해보자"
 ---
 
 # eslint yarn-berry jetbrains 오류
@@ -15,7 +15,7 @@ description: "돈 받고 파는데 이래도 되나..."
 
 ## eslint + yarn-berry PnP + jetbrains 설정
 
-Webstorm + yarn-berry PnP(Plug'n'Play)로 프로젝트를 시작하려 할 때 다음과 같은 오류를 마주할 수 있습니다.
+Webstorm + yarn-berry PnP(Plug'n'Play)로 프로젝트를 시작하려 할 때 다음과 같은 오류를 마주할 수 있다.
 
 ``ESlint: Initializtion error (ESLint). Missing "./lib/options" export in "eslint" package``
 

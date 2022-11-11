@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Introduce = () => {
   return (
@@ -14,7 +15,11 @@ const Introduce = () => {
           height={90}
         />
       </div>
-      <span>Detailed Resume</span>
+      <Link href="https://mature-store-9e8.notion.site/8d69e75fef4d413d83dbc9400d27f399">
+          <a>
+            <span>Detailed Resume</span>
+          </a>
+      </Link>
     </div>
   );
 };

@@ -15,11 +15,13 @@ const Introduce = () => {
           height={90}
         />
       </div>
-      <Link href="https://mature-store-9e8.notion.site/8d69e75fef4d413d83dbc9400d27f399">
-          <a>
-            <span>Detailed Resume</span>
-          </a>
-      </Link>
+        <a
+            target="_blank"
+            href="https://mature-store-9e8.notion.site/8d69e75fef4d413d83dbc9400d27f399"
+            rel="noreferrer"
+        >
+          <span className="underline underline-offset-2 text-blue-400">Detailed Resume</span>
+        </a>
     </div>
   );
 };

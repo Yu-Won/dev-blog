@@ -13,7 +13,7 @@ interface SlugInterface {
 const PostPage = ({ post, mdx }: { post: Post, mdx: MDXRemoteSerializeResult }) => {
   const { title, tags, published, date, description } = post.frontMatter;
   return (
-    <div className="py-16 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center">
+    <div className="pt-16 pb-24 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center prose-p:indent-2">
       <Head>
         <meta name="title" content={title} />
           {tags.map((tag) => (

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import Lottie from "lottie-react";
 import { useTheme } from "next-themes";
-import cat from "../public/json/indigo-cat.json";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { SunIcon } from "@heroicons/react/24/outline";
 
@@ -17,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
-      <Lottie className="px-9 h-20" animationData={cat} loop />
+      <div className="flex px-9">Yu-Won</div>
       <button
         className="flex px-9 cursor-pointer"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

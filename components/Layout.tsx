@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
     <div className="flex mobile:flex-col laptop:flex-row w-full min-h-screen h-full font-sans">
       <Header />
       <Sidebar />
-      <main className="w-full laptop:border-x dark:border-zinc-500">
+      <main className="w-full pb-24 laptop:border-x dark:border-zinc-500">
         {children}
       </main>
       <About />

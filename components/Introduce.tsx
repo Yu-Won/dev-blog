@@ -5,7 +5,7 @@ const Introduce = () => {
   return (
     <div className="flex flex-col text-center py-8">
       <span>Hello World 👋</span>
-      <span>I&apos;m frontend engineer</span>
+      <span>I&apos;m Frontend Engineer</span>
       <div className="py-4">
         <Image
           className="rounded-full"
@@ -15,13 +15,13 @@ const Introduce = () => {
           height={90}
         />
       </div>
-        <a
+      {/* <a
             target="_blank"
             href="https://mature-store-9e8.notion.site/8d69e75fef4d413d83dbc9400d27f399"
             rel="noreferrer"
         >
           <span className="underline underline-offset-2 text-blue-400">Detailed Resume</span>
-        </a>
+        </a> */}
     </div>
   );
 };

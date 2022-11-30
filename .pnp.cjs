@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:8.0.0"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
+            ["@types/unist", "npm:2.0.6"],\
             ["autoprefixer", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:10.4.8"],\
             ["cssnano", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:5.1.14"],\
             ["dayjs", "npm:1.11.5"],\
@@ -51,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["front-matter", "npm:4.0.2"],\
             ["glob", "npm:8.0.3"],\
             ["husky", "npm:8.0.1"],\
+            ["image-size", "npm:1.0.2"],\
             ["lint-staged", "npm:13.0.3"],\
             ["next", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:12.2.5"],\
             ["next-mdx-remote", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:4.1.0"],\
@@ -72,7 +74,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tailwindcss", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:3.1.8"],\
             ["ts-node", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"],\
-            ["unist-util-visit", "npm:4.1.1"]\
+            ["unified", "npm:10.1.2"],\
+            ["unist-util-visit", "npm:4.1.1"],\
+            ["vfile", "npm:5.3.6"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2268,6 +2272,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:8.0.0"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
+            ["@types/unist", "npm:2.0.6"],\
             ["autoprefixer", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:10.4.8"],\
             ["cssnano", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:5.1.14"],\
             ["dayjs", "npm:1.11.5"],\
@@ -2277,6 +2282,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["front-matter", "npm:4.0.2"],\
             ["glob", "npm:8.0.3"],\
             ["husky", "npm:8.0.1"],\
+            ["image-size", "npm:1.0.2"],\
             ["lint-staged", "npm:13.0.3"],\
             ["next", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:12.2.5"],\
             ["next-mdx-remote", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:4.1.0"],\
@@ -2298,7 +2304,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tailwindcss", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:3.1.8"],\
             ["ts-node", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"],\
-            ["unist-util-visit", "npm:4.1.1"]\
+            ["unified", "npm:10.1.2"],\
+            ["unist-util-visit", "npm:4.1.1"],\
+            ["vfile", "npm:5.3.6"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3876,6 +3884,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ignore-npm-5.2.0-fc4b58a4f3-6b1f926792.zip/node_modules/ignore/",\
           "packageDependencies": [\
             ["ignore", "npm:5.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["image-size", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/image-size-npm-1.0.2-ed5424d843-01745fdb47.zip/node_modules/image-size/",\
+          "packageDependencies": [\
+            ["image-size", "npm:1.0.2"],\
+            ["queue", "npm:6.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7203,6 +7221,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["queue", [\
+        ["npm:6.0.2", {\
+          "packageLocation": "./.yarn/cache/queue-npm-6.0.2-ebbcf599cf-ebc2363924.zip/node_modules/queue/",\
+          "packageDependencies": [\
+            ["queue", "npm:6.0.2"],\
+            ["inherits", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["queue-microtask", [\
         ["npm:1.2.3", {\
           "packageLocation": "./.yarn/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-b676f8c040.zip/node_modules/queue-microtask/",\
@@ -8841,6 +8869,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/vfile-npm-5.3.4-0d04e09115-2382edc7c6.zip/node_modules/vfile/",\
           "packageDependencies": [\
             ["vfile", "npm:5.3.4"],\
+            ["@types/unist", "npm:2.0.6"],\
+            ["is-buffer", "npm:2.0.5"],\
+            ["unist-util-stringify-position", "npm:3.0.2"],\
+            ["vfile-message", "npm:3.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.3.6", {\
+          "packageLocation": "./.yarn/cache/vfile-npm-5.3.6-2fd46e1771-1aa5efff51.zip/node_modules/vfile/",\
+          "packageDependencies": [\
+            ["vfile", "npm:5.3.6"],\
             ["@types/unist", "npm:2.0.6"],\
             ["is-buffer", "npm:2.0.5"],\
             ["unist-util-stringify-position", "npm:3.0.2"],\

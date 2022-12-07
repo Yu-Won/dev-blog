@@ -1,3 +1,27 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.text-code-purple {
+  color: #d9a9ff;
+}
+
+.text-code-red {
+  color: #ff8383;
+}
+
+.text-code-white {
+  color: #fff;
+}
+
+.text-code-blue {
+  color: #93ddfd;
+}
+
+.text-code-yellow {
+  color: #ffe484;
+}
+
+.text-code-green {
+  color: #b5f4a5;
+}

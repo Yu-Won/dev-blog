@@ -22,7 +22,7 @@ const PostPage = ({
 }) => {
   const { title, tags, published, date, description } = post.frontMatter;
   return (
-    <div className="pt-16 pb-24 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center prose-p:indent-2">
+    <div className="pt-16 pb-24 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center">
       <Head>
         <meta name="title" content={title} />
         {tags.map((tag) => (

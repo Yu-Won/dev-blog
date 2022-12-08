@@ -14,8 +14,8 @@ const Header = () => {
   if (!mounted) return null;
 
   return (
-    <header className="mobile:flex laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
-      <div className="flex px-9">Yu-Won</div>
+    <header className="mobile:flex mobile:fixed mobile:w-full mobile:z-20 laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
+      <div className="flex px-9 font-semibold">Yu-Won</div>
       <button
         className="flex px-9 cursor-pointer"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

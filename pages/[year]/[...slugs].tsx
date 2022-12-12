@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/future/image";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { getAllPosts, parseMarkdownToMdx } from "utils/mdxUtils";
@@ -10,8 +9,6 @@ interface SlugInterface {
   year: string;
   slugs: string[];
 }
-
-const imageComponent = { Image };
 
 const PostPage = ({
   post,
@@ -30,7 +27,7 @@ const PostPage = ({
         ))}
         <meta name="description" content={description} />
       </Head>
-      <MDXRemote {...mdx} components={imageComponent} />
+      <MDXRemote {...mdx} />
     </div>
   );
 };

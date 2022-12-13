@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
-import Image from "next/image";
+import Image from "next/future/image";
 import type { ReactElement, ReactNode } from "react";
-import { MDXProvider } from '@mdx-js/react';
+import { MDXProvider } from "@mdx-js/react";
 import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
 import "styles/global.css";
@@ -10,11 +10,18 @@ import { SEO } from "components/SEO";
 import Layout from "components/Layout";
 
 const ResponsiveImage = (props: any) => (
-  <Image alt={props.alt} layout="responsive" {...props} />
+  // TODO: light & dark
+  <Image
+    alt={props.alt}
+    layout="responsive"
+    className="w-full h-full"
+    priority
+    {...props}
+  />
 );
 
 const components = {
-  img: ResponsiveImage
+  img: ResponsiveImage,
 };
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -22,18 +29,18 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 };
 
 type AppPropsWithLayout = AppProps & {
-    Component: NextPageWithLayout;
+  Component: NextPageWithLayout;
 };
 
 const yuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <ThemeProvider attribute="class">
       <DefaultSeo {...SEO} />
-        <MDXProvider components={components}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </MDXProvider>
+      <MDXProvider components={components}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </MDXProvider>
     </ThemeProvider>
   );
 };

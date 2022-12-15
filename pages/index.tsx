@@ -20,13 +20,14 @@ const Home = (props: IProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const recentPosts = (await getAllPosts()).slice(0, 10);
+  // TODO: Pagination
+  const recentPosts = (await getAllPosts()).slice(0, 100);
   const allTags = await getAllTagsFromPosts();
   return {
     props: {
-      posts: recentPosts.map((post) => ({ ...post, path: '' })),
-      tags: allTags
-    }
+      posts: recentPosts.map((post) => ({ ...post, path: "" })),
+      tags: allTags,
+    },
   };
 };
 

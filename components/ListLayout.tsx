@@ -8,10 +8,11 @@ interface IProps {
 
 const ListLayout = (props: IProps) => {
   const { posts } = props;
+  // TODO: Pagination
   return (
     <ul>
       {posts
-        .slice(0, 10)
+        .slice(0, 100)
         .map(({ frontMatter: frontmatter, fields: { slug } }) => {
           const { date, title, tags, description } = frontmatter;
           return (

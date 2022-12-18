@@ -15,18 +15,14 @@ const Gnb = () => {
         </a>
       </li>
       <li className="flex mx-auto">
-        <a
-          target="_blank"
-          href="https://github.com/Yu-Won"
-          rel="noreferrer"
-        >
+        <a target="_blank" href="https://github.com/Yu-Won" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} size="xl" />
         </a>
       </li>
       <li className="flex mx-auto">
         <a
           target="_blank"
-          href="https://github.com/Yu-Won"
+          href="https://www.linkedin.com/in/yu-won/"
           rel="noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedin} size="xl" />

@@ -1,5 +1,5 @@
 export const SiteConfig = {
-  url: "https://Yu-Won.xyz",
+  url: "https://www.yu-won.blog",
   pathPrefix: "/",
   title: "Yu-Won dev-blog",
   subtitle: "dev-blog",

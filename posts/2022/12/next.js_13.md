@@ -2,7 +2,7 @@
 title: "next.js 13"
 tags:
   - next.js
-published: true
+published: false
 date: 2022-12-01 22:38:47
 description: "next.js 13은 뭐가 달라졌을까?"
 ---
@@ -80,7 +80,8 @@ next.js는 해당 script를 추가해야 실행할 수 있다.
 ```
 
 4. `next.config.js` 추가하기
-   app 폴더 기능은 아직 beta 단계이기 때문에 default로 설정되어있지 않다. 때문에 next.config.js 에서 다음과 같이 app 폴더 기능을 사용하겠다고 설정해야한다.
+
+app 폴더 기능은 아직 beta 단계이기 때문에 default로 설정되어있지 않다. 때문에 next.config.js 에서 다음과 같이 app 폴더 기능을 사용하겠다고 설정해야한다.
 
 ```js
 /** @type {import('next').NextConfig} */
@@ -109,13 +110,16 @@ touch page.tsx
 // app/page.tsx
 // page.tsx를 간단하게 리턴해준다.
 const Page = () => {
-  return <>Hello, Next.js!</>;
+  return <div>Hello, Next.js!</div>;
 };
 
 export default Page;
 ```
 
-다음과 같은 순서대로 진행하면 app 폴더 내에 head.tsx, layout.tsx 파일이 추가되고 http://localhost:3000 에 서버가 켜진다.
+다음과 같은 순서대로 진행하면 app 폴더 내에 `head.tsx`, `layout.tsx` 파일이 추가되고 http://localhost:3000 에 서버가 켜진다.
 
 http://localhost:3000에 접속하면 다음과 같이 보인다.
 ![pnpm run dev](next.js_run_dev.png)
+
+오류가 나고 있다.<br />
+app directory 내에 생긴 `head.tsx`와 `layout.tsx`를 살펴보자.

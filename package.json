@@ -8,7 +8,8 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "vercel-deploy": "next build && next export"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

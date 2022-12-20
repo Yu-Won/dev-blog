@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
-import Image from "next/future/image";
+import Image from "next/image";
 import type { ReactElement, ReactNode } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { ThemeProvider } from "next-themes";
@@ -8,6 +8,7 @@ import { DefaultSeo } from "next-seo";
 import "styles/global.css";
 import { SEO } from "components/SEO";
 import Layout from "components/Layout";
+import { defaultImagePlaceHolder } from "utils/config";
 
 const ResponsiveImage = (props: any) => (
   // TODO: light & dark
@@ -16,6 +17,7 @@ const ResponsiveImage = (props: any) => (
     layout="responsive"
     className="w-full h-full"
     priority
+    placeholder={defaultImagePlaceHolder}
     {...props}
   />
 );

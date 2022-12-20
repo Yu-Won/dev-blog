@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import Gnb from "./Gnb";
 
@@ -22,7 +22,7 @@ const Sidebar = () => {
             <a>
               <Image
                 src="/images/dark_small_logo.png"
-                alt=""
+                alt="dark small logo"
                 width={20}
                 height={20}
                 className="w-auto h-auto"
@@ -34,7 +34,7 @@ const Sidebar = () => {
             <a>
               <Image
                 src="/images/light_small_logo.png"
-                alt=""
+                alt="large small logo"
                 width={20}
                 height={20}
                 className="w-auto h-auto"

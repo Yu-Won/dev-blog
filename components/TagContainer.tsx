@@ -16,7 +16,7 @@ const TagContainer = (props: IProps) => {
             className="w-fit items-center whitespace-nowrap py-1.5 space-x-2"
           >
             <Link href={`/tag/${tagValue.tag}`}>{tagValue.tag}</Link>
-            <span className="text-sm text-violet-200 dark:text-indigo-500">
+            <span className="text-sm text-violet-400 dark:text-indigo-500">
               {tagValue.count}
             </span>
           </li>

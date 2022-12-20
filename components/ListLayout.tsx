@@ -28,7 +28,7 @@ const ListLayout = (props: IProps) => {
                   {tags.map((tag) => (
                     <li
                       key={tag}
-                      className="w-fit rounded-2xl py-1 px-4 text-sm text-white bg-violet-200 dark:bg-indigo-500"
+                      className="w-fit rounded-2xl py-1 px-4 text-sm text-white bg-violet-400 dark:bg-indigo-500"
                     >
                       {tag}
                     </li>

@@ -17,7 +17,7 @@ const ListLayout = (props: IProps) => {
           const { date, title, tags, description } = frontmatter;
           return (
             <li key={slug} className="flex items-center h-52">
-              <article className="mx-auto w-9/12 border-b py-9 space-y-1.5 dark:border-zinc-500">
+              <article className="flex flex-col mx-auto w-9/12 h-full justify-center border-b space-y-1.5 dark:border-zinc-500">
                 <div className="font-bold text-2xl">
                   <Link href={`${slug}`}>{title}</Link>
                 </div>

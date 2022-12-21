@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { PostSeo } from "components/SEO";
 import { getAllPosts, parseMarkdownToMdx } from "utils/mdxUtils";
 import { Post } from "types";
+import { SiteConfig } from "utils/config";
 
 interface SlugInterface {
   [key: string]: string | string[] | undefined;
@@ -13,11 +15,13 @@ interface SlugInterface {
 const PostPage = ({
   post,
   mdx,
+  slug,
 }: {
   post: Post;
   mdx: MDXRemoteSerializeResult;
+  slug: string;
 }) => {
-  const { title, tags, published, date, description } = post.frontMatter;
+  const { title, tags, date, description } = post.frontMatter;
   return (
     <div className="pt-16 pb-24 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center">
       <Head>
@@ -27,6 +31,13 @@ const PostPage = ({
         ))}
         <meta name="description" content={description} />
       </Head>
+      <PostSeo
+        title={title}
+        tags={tags}
+        date={date}
+        description={description}
+        url={`${SiteConfig.url}/${slug}`}
+      />
       <MDXRemote {...mdx} />
     </div>
   );
@@ -62,6 +73,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         post,
         mdx: source,
+        slug,
       },
     };
   }

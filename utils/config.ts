@@ -5,7 +5,7 @@ export const SiteConfig = {
   subtitle: "dev-blog",
   copyright: "Yu-Won © All rights reserved.",
   disqusShortname: "",
-  googleAnalyticsId: "G-6BS29WTMEQ",
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID,
   menu: [
     {
       label: "Tags",

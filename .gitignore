@@ -12,3 +12,6 @@
 
 # next.js
 /.next
+
+# env
+.env*.*

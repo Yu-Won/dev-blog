@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:2.1.3"],\
             ["@tailwindcss/typography", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:0.5.7"],\
             ["@types/glob", "npm:8.0.0"],\
+            ["@types/gtag.js", "npm:0.0.12"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/unist", "npm:2.0.6"],\
@@ -595,6 +596,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:8.0.0"],\
             ["@types/minimatch", "npm:5.1.1"],\
             ["@types/node", "npm:18.7.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/gtag.js", [\
+        ["npm:0.0.12", {\
+          "packageLocation": "./.yarn/cache/@types-gtag.js-npm-0.0.12-6390d727c7-34efc27fbf.zip/node_modules/@types/gtag.js/",\
+          "packageDependencies": [\
+            ["@types/gtag.js", "npm:0.0.12"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2184,6 +2194,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mdx-js/react", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:2.1.3"],\
             ["@tailwindcss/typography", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:0.5.7"],\
             ["@types/glob", "npm:8.0.0"],\
+            ["@types/gtag.js", "npm:0.0.12"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/unist", "npm:2.0.6"],\

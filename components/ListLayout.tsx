@@ -24,16 +24,16 @@ const ListLayout = (props: IProps) => {
                 <div className="font-base text-base">
                   <Link href={`${slug}`}>{description}</Link>
                 </div>
-                <div className="w-fit mobile:grid mobile:grid-cols-2 mobile:gap-1 tablet:flex tablet:space-x-4">
+                <ul className="w-fit mobile:grid mobile:grid-cols-2 mobile:gap-1 tablet:flex tablet:space-x-4">
                   {tags.map((tag) => (
                     <li
                       key={tag}
-                      className="w-fit rounded-2xl py-1 px-4 text-sm text-white bg-violet-400 dark:bg-indigo-500"
+                      className="w-fit rounded-2xl py-1 px-4 text-sm text-white bg-indigo-600 dark:bg-purple-800"
                     >
                       {tag}
                     </li>
                   ))}
-                </div>
+                </ul>
                 <div className="text-xs">
                   {dayjs(date).format("YYYY-MM-DD HH:mm")}
                 </div>

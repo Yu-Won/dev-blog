@@ -17,6 +17,9 @@ const About = () => {
   return (
     <div className="mobile:hidden laptop:flex w-72 ml-auto flex-col py-12">
       <button
+        type="button"
+        id={`${theme} theme button`}
+        aria-label={`${theme} theme button`}
         className="flex w-6 h-6 cursor-pointer mx-auto"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >

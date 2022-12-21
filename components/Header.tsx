@@ -17,6 +17,9 @@ const Header = () => {
     <header className="mobile:flex mobile:fixed mobile:w-full mobile:z-20 laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
       <div className="flex px-9 font-semibold">Yu-Won</div>
       <button
+        type="button"
+        id={`header ${theme} theme button`}
+        aria-label={`header ${theme} theme button`}
         className="flex px-9 cursor-pointer"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >

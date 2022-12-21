@@ -12,10 +12,6 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@heroicons/react": "^2.0.13",
     "@mdx-js/react": "^2.1.3",
     "cssnano": "^5.1.14",
     "dayjs": "^1.11.5",

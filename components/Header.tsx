@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { MoonIcon } from "@heroicons/react/24/solid";
-import { SunIcon } from "@heroicons/react/24/outline";
+import MoonIcon from "./icons/MoonIcon";
+import SunIcon from "./icons/SunIcon";
 
 const Header = () => {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -20,11 +20,7 @@ const Header = () => {
         className="flex px-9 cursor-pointer"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        {theme === "dark" ? (
-          <MoonIcon className="w-6 h-6" />
-        ) : (
-          <SunIcon className="w-6 h-6" />
-        )}
+        {theme === "dark" ? <MoonIcon /> : <SunIcon />}
       </button>
     </header>
   );

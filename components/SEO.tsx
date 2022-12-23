@@ -11,7 +11,7 @@ export const SEO = {
     url: SiteConfig.url,
     title: SiteConfig.title,
     description: SiteConfig.subtitle,
-    images: [{ alt: "default thumbnail", url: "/thumbnail.png" }],
+    images: [{ alt: "default thumbnail", url: "/images/thumbnail.png" }],
   },
   additionalMetaTags: [
     {

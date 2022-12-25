@@ -1,9 +1,9 @@
 ---
 name: "✅ FEATURE"
 about: feature 작업사항을 입력해주세요.
-title: ''
-labels: ''
-assignees: ''
+title: "[FEATURE]"
+labels: enhancement
+assignees: Yu-Won
 
 ---
 
@@ -13,8 +13,8 @@ assignees: ''
 
 ## TODO
 ---
--[ ] TODO
--[ ] TODO
+- [ ] TODO
+- [ ] TODO
 
 ## ETC
 ---

@@ -14,7 +14,6 @@ import { defaultImagePlaceHolder, SiteConfig } from "utils/config";
 import { pageview } from "utils/gtag";
 
 const ResponsiveImage = (props: any) => (
-  // TODO: light & dark
   <Image
     alt={props.alt}
     layout="responsive"

@@ -8,7 +8,6 @@ interface IProps {
 
 const ListLayout = (props: IProps) => {
   const { posts } = props;
-  // TODO: Pagination
   return (
     <ul>
       {posts

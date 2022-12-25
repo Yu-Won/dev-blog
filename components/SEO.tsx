@@ -11,7 +11,13 @@ export const SEO = {
     url: SiteConfig.url,
     title: SiteConfig.title,
     description: SiteConfig.subtitle,
-    images: [{ alt: "default thumbnail", url: "/images/thumbnail.png" }],
+    images: [
+      {
+        url: "/images/thumbnail.png",
+        alt: "default thumbnail",
+        type: "image/png",
+      },
+    ],
   },
   additionalMetaTags: [
     {
@@ -77,7 +83,6 @@ export const PostSeo = ({
         }}
       />
       <ArticleJsonLd
-        // TODO: image
         url={url}
         title={title}
         datePublished={dayjs(date).toISOString()}

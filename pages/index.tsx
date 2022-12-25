@@ -20,7 +20,6 @@ const Home = (props: IProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // TODO: Pagination
   const recentPosts = (await getAllPosts()).slice(0, 100);
   const allTags = await getAllTagsFromPosts();
   return {

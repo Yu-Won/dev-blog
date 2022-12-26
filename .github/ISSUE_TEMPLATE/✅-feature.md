@@ -7,7 +7,7 @@ assignees: Yu-Won
 
 ---
 
-## Descritpion
+## Description
 설명을 작성하세요.
 
 ## TODO

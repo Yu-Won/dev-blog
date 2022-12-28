@@ -13,7 +13,7 @@ const TagContainer = (props: IProps) => {
         {tags.map((tagValue) => (
           <li
             key={tagValue.tag}
-            className="w-fit items-center whitespace-nowrap py-1.5 space-x-2"
+            className="w-fit whitespace-nowrap py-1.5 space-x-2 hover:text-zinc-500 dark:hover:text-zinc-300"
           >
             <Link href={`/tag/${tagValue.tag}`}>{tagValue.tag}</Link>
             <span className="text-sm text-indigo-600 dark:text-purple-800">

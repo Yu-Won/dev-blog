@@ -23,7 +23,7 @@ const ListLayout = (props: IProps) => {
                 <div className="font-base text-base">
                   <Link href={`/${slug}`}>{description}</Link>
                 </div>
-                <ul className="w-fit mobile:grid mobile:grid-cols-2 mobile:gap-1 tablet:flex tablet:space-x-4">
+                <ul className="flex flex-wrap w-full gap-1.5">
                   {tags.map((tag) => (
                     <li
                       key={tag}

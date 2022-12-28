@@ -18,10 +18,10 @@ const ListLayout = (props: IProps) => {
             <li key={slug} className="flex items-center h-52">
               <article className="flex flex-col mx-auto w-9/12 h-full justify-center border-b space-y-1.5 dark:border-zinc-500">
                 <div className="font-bold text-2xl">
-                  <Link href={`${slug}`}>{title}</Link>
+                  <Link href={`/${slug}`}>{title}</Link>
                 </div>
                 <div className="font-base text-base">
-                  <Link href={`${slug}`}>{description}</Link>
+                  <Link href={`/${slug}`}>{description}</Link>
                 </div>
                 <ul className="w-fit mobile:grid mobile:grid-cols-2 mobile:gap-1 tablet:flex tablet:space-x-4">
                   {tags.map((tag) => (

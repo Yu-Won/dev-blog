@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import MoonIcon from "./icons/MoonIcon";
 import SunIcon from "./icons/SunIcon";
+import { SiteConfig } from "utils/config";
 
 const Header = () => {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -15,7 +17,9 @@ const Header = () => {
 
   return (
     <header className="mobile:flex mobile:fixed mobile:w-full mobile:z-20 laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
-      <div className="flex px-9 font-semibold">Yu-Won</div>
+      <div className="flex px-9 font-semibold">
+        <Link href="/">{SiteConfig.author.name}</Link>
+      </div>
       <button
         type="button"
         id={`header ${theme} theme button`}

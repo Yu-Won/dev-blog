@@ -3,6 +3,8 @@ import { getAllPosts, getAllTagsFromPosts } from "utils/mdxUtils";
 import TagContainer from "components/TagContainer";
 import ListLayout from "components/ListLayout";
 import { Post, TagWithCount } from "types";
+import Introduce from "components/Introduce";
+import { SiteConfig } from "utils/config";
 
 interface IProps {
   posts: Post[];
@@ -13,6 +15,9 @@ const Home = (props: IProps) => {
   const { posts, tags } = props;
   return (
     <div className="flex flex-col w-full">
+      <div className="mx-auto laptop:hidden">
+        <Introduce />
+      </div>
       <TagContainer tags={tags} />
       <ListLayout posts={posts} />
     </div>
@@ -24,7 +29,10 @@ export const getStaticProps: GetStaticProps = async () => {
   const allTags = await getAllTagsFromPosts();
   return {
     props: {
-      posts: recentPosts.map((post) => ({ ...post, path: "" })),
+      posts: recentPosts.map((post) => ({
+        ...post,
+        path: `${SiteConfig.url}/${post.fields.slug}`,
+      })),
       tags: allTags,
     },
   };

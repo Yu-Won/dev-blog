@@ -1,11 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SiteConfig } from "utils/config";
 
 const Introduce = () => {
   return (
-    <div className="flex flex-col text-center py-8">
-      <span>Hello World 👋</span>
-      <span>I&apos;m Frontend Engineer</span>
+    <div className="flex items-center text-center mobile:flex-row-reverse mobile:justify-center mobile:gap-7 mobile:pt-8 laptop:flex-col laptop:gap-0 laptop:py-8">
+      <div className="flex flex-col">
+        {/* <div className="pb-4">
+          <span> Written by </span>
+          <Link href="/about">
+            <a className="underline underline-offset-2 text-blue-400">
+              @{SiteConfig.author.name}
+            </a>
+          </Link>
+        </div> */}
+        <p>Hello World 👋</p>
+        <p>I&apos;m {SiteConfig.author.bio}</p>
+      </div>
       <div className="py-4">
         <Image
           className="rounded-full"
@@ -15,13 +26,6 @@ const Introduce = () => {
           height={90}
         />
       </div>
-      {/* <a
-            target="_blank"
-            href="https://mature-store-9e8.notion.site/8d69e75fef4d413d83dbc9400d27f399"
-            rel="noreferrer"
-        >
-          <span className="underline underline-offset-2 text-blue-400">Detailed Resume</span>
-        </a> */}
     </div>
   );
 };

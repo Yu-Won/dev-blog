@@ -14,8 +14,11 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import imageMetadata from "./imageMetadata";
 import { FrontMatter, Post, TagWithCount } from "../types";
 
-const DIR_REPLACE_STRING = "/posts";
-export const POSTS_PATH = `${process.cwd()}${DIR_REPLACE_STRING}`;
+const DIR_POSTS_REPLACE_STRING = "/posts";
+const DIR_ABOUT_REPLACE_STRING = "/about";
+
+export const POSTS_PATH = `${process.cwd()}${DIR_POSTS_REPLACE_STRING}`;
+export const ABOUT_PATH = `${process.cwd()}${DIR_ABOUT_REPLACE_STRING}`;
 
 type TokenType =
   | "tag"
@@ -56,6 +59,8 @@ function parseCodeSnippet() {
   };
 }
 
+export const getAbout = async (): Promise<any> => {};
+
 export const getAllPosts = async (): Promise<Post[]> => {
   const files = sync(`${POSTS_PATH}/**/*.md*`).reverse();
   return files
@@ -66,7 +71,11 @@ export const getAllPosts = async (): Promise<Post[]> => {
       const { tags: fmTags, published, date } = fm;
 
       const slug = path
-        .slice(path.indexOf(DIR_REPLACE_STRING) + DIR_REPLACE_STRING.length + 1)
+        .slice(
+          path.indexOf(DIR_POSTS_REPLACE_STRING) +
+            DIR_POSTS_REPLACE_STRING.length +
+            1
+        )
         .replace(".mdx", "")
         .replace(".md", "");
 

@@ -59,7 +59,39 @@ function parseCodeSnippet() {
   };
 }
 
-export const getAbout = async (): Promise<any> => {};
+export const getAbout = async (): Promise<Post[]> => {
+  const files = sync(`${ABOUT_PATH}/**/*.md*`);
+  return files.reduce<Post[]>((prev, path) => {
+    const file = fs.readFileSync(path, { encoding: "utf8" });
+    const { attributes, body } = frontMatter<FrontMatter>(file);
+    const fm: FrontMatter = attributes;
+    const { date } = fm;
+
+    const slug = path
+      .slice(
+        path.indexOf(DIR_ABOUT_REPLACE_STRING) +
+          DIR_ABOUT_REPLACE_STRING.length +
+          1
+      )
+      .replace(".mdx", "")
+      .replace(".md", "");
+
+    const result: Post = {
+      frontMatter: {
+        ...fm,
+        date: new Date(date).toISOString().substring(0, 19),
+      },
+      body,
+      fields: {
+        slug,
+      },
+      path,
+    };
+    prev.push(result);
+
+    return prev;
+  }, []);
+};
 
 export const getAllPosts = async (): Promise<Post[]> => {
   const files = sync(`${POSTS_PATH}/**/*.md*`).reverse();

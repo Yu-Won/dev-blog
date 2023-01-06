@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="mobile:flex mobile:fixed mobile:w-full mobile:z-20 laptop:hidden h-14 shadow items-center justify-between dark:border-b bg-white dark:bg-gray-800">
       <div className="flex px-9 font-semibold">
-        <Link href="/">{SiteConfig.author.name}</Link>
+        <Link href={SiteConfig.pathPrefix}>{SiteConfig.author.name}</Link>
       </div>
       <button
         type="button"

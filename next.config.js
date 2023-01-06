@@ -21,6 +21,14 @@ module.exports = withBundleAnalyzer({
     imageSizes: [64, 256],
     deviceSizes: [640],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/1",
+      },
+    ];
+  },
   webpack: (config, options) => {
     config.plugins.push(new CompressionPlugin());
 

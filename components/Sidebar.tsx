@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Gnb from "./Gnb";
+import { SiteConfig } from "utils/config";
 
 const Sidebar = () => {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -18,7 +19,7 @@ const Sidebar = () => {
     <aside className="mobile:hidden laptop:flex w-20 h-screen flex-col text-center justify-evenly">
       <div className="mx-auto w-7 h-5">
         {theme === "dark" ? (
-          <Link href="/">
+          <Link href={SiteConfig.pathPrefix}>
             <a>
               <Image
                 src="/images/dark_small_logo.png"
@@ -30,7 +31,7 @@ const Sidebar = () => {
             </a>
           </Link>
         ) : (
-          <Link href="/">
+          <Link href={SiteConfig.pathPrefix}>
             <a>
               <Image
                 src="/images/light_small_logo.png"

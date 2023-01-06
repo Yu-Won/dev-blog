@@ -1,6 +1,6 @@
 export const SiteConfig = {
   url: "https://www.yu-won.blog",
-  pathPrefix: "/",
+  pathPrefix: "/1",
   title: "Yu-Won dev-blog",
   subtitle: "dev-blog",
   copyright: "Yu-Won © All rights reserved.",

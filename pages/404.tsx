@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteConfig } from "utils/config";
 
 const Custom404 = () => {
   return (
@@ -7,7 +8,7 @@ const Custom404 = () => {
       <span className="pt-4">Oh! An error has occurred! 🙀</span>
       <span className="pb-4">please go back and try again.</span>
       <div className="flex bg-indigo-600 dark:bg-purple-800 px-4 py-1.5 rounded-2xl font-medium text-white">
-        <Link href="/">go back</Link>
+        <Link href={SiteConfig.pathPrefix}>go back</Link>
       </div>
     </div>
   );

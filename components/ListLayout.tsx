@@ -17,7 +17,7 @@ const ListLayout = (props: IProps) => {
           return (
             <li key={slug} className="flex items-center h-52">
               <article className="flex flex-col mx-auto w-9/12 h-full py-3 justify-center border-b dark:border-zinc-500 hover:text-zinc-500 dark:hover:text-zinc-300">
-                <Link href={`/${slug}`}>
+                <Link href={`/post/${slug}`}>
                   <a>
                     <div className="font-bold text-2xl pb-3">{title}</div>
                     <div className="font-base text-base pb-2">

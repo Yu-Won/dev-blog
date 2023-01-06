@@ -30,7 +30,12 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
   return (
     <div className="flex mx-auto items-center py-16 text-lg font-semibold space-x-6">
       <div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
-        <button type="button" onClick={prevPage}>
+        <button
+          type="button"
+          role="button"
+          aria-label="prev page navigation button"
+          onClick={prevPage}
+        >
           <ChevronLeft />
         </button>
       </div>
@@ -47,7 +52,12 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
         ))}
       </ul>
       <div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
-        <button type="button" onClick={nextPage}>
+        <button
+          type="button"
+          role="button"
+          aria-label="next page navigation button"
+          onClick={nextPage}
+        >
           <ChevronRight />
         </button>
       </div>

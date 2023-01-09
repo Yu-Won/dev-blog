@@ -36,16 +36,16 @@ const MainPage = (props: IProps) => {
 };
 
 export const getStaticPaths = async () => {
-  const allPostsLength = (await getAllPosts()).length;
+  const allPost = await getAllPosts();
   const paths: { params: { page: string } }[] = [];
 
-  for (let i = 1; i <= Math.ceil(allPostsLength / PAGE_COUNT); i++) {
-    paths.push({ params: { page: i.toString() } });
-  }
+  allPost.filter((value, index) =>  index / 3 % 1 === 0).forEach((value, index) => {
+    paths.push({ params: { page: (index+1).toString() } })
+  })
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
 };
 

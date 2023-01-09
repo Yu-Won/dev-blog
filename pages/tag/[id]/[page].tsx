@@ -40,22 +40,20 @@ const Tag = (props: ITagProps) => {
 
 export const getStaticPaths = async () => {
   const allTags = await getAllTagsFromPosts();
+  let allTagPath = allTags.map((value) => ({ tag: value.tag, page: Math.ceil(value.count / PAGE_COUNT) }));
 
   const paths: { params: { id: string; page: string } }[] = [];
 
-  allTags.forEach((tags) => {
-    if (Math.ceil(tags.count / PAGE_COUNT) > 1) {
-      for (let i = 1; i <= Math.ceil(tags.count / PAGE_COUNT); i++) {
-        paths.push({ params: { id: tags.tag, page: i.toString() } });
-      }
-    } else {
-      paths.push({ params: { id: tags.tag, page: "1" } });
+  allTagPath.forEach((tags) => {
+    while(tags.page) {
+      paths.push({ params: { id: tags.tag, page: tags.page.toString() } })
+      tags.page--;
     }
   });
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
 };
 

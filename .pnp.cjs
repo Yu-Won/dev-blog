@@ -60,6 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-themes", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:0.2.1"],\
             ["pinst", "npm:3.0.0"],\
             ["postcss", "npm:8.4.16"],\
+            ["prettier", "npm:2.8.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:18.2.0"],\
             ["rehype-autolink-headings", "npm:6.1.1"],\
@@ -2335,6 +2336,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-themes", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:0.2.1"],\
             ["pinst", "npm:3.0.0"],\
             ["postcss", "npm:8.4.16"],\
+            ["prettier", "npm:2.8.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0557fbb758ce9f2168fcdd9981feb54b8c0240b096d3c2eca3f8d90b215190741bf8658c449e305db81a62ae8e93c27d5ed044817ceb055dbbbe6f13b04b8f27#npm:18.2.0"],\
             ["rehype-autolink-headings", "npm:6.1.1"],\
@@ -7219,6 +7221,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.2.1-3e4d272a55-cd192ec0d0.zip/node_modules/prelude-ls/",\
           "packageDependencies": [\
             ["prelude-ls", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.8.2", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.2-201e3d1dcf-740c56c212.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.8.2"]\
           ],\
           "linkType": "HARD"\
         }]\

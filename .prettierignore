@@ -1,0 +1,21 @@
+# dependencies
+.yarn/*
+.pnp.cjs
+.pnp.loader.mjs
+yarn.lock
+
+# jetbrains & vscode
+.idea/* 
+.vscode
+
+# next.js
+.next
+
+# github
+.github
+
+# husky
+.husky
+
+# env
+.env*.*

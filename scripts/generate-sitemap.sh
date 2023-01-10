@@ -28,4 +28,3 @@ echo "🗜 complete sitemap compress and merge!"
 
 # sitemap update ping
 curl http://google.com/ping?sitemap=https://www.yu-won.blog/sitemap.xml
-echo "✈️ update search console"

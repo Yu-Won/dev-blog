@@ -6,14 +6,17 @@ const getDate = new Date().toISOString();
 const url = "https://www.yu-won.blog";
 
 const publicPath = `${process.cwd()}public`.replace("scripts", "");
+console.log("publicPath", publicPath);
 
 (async () => {
 	const pages = await sync(`${publicPath}/sitemap/*.gz`);
+	console.log("pages", pages);
 
 	const sitemapIndex = `
   ${pages
 		.map((page) => {
 			const path = `${url}${page.split(`dev-blog`)[1]}`;
+			console.log("path", path);
 			return `
       <sitemap>
         <loc>${path}</loc>

@@ -27,4 +27,4 @@ node ./sitemap.js
 echo "🗜 complete sitemap compress and merge!"
 
 # sitemap update ping
-curl http://google.com/ping?sitemap=https://www.yu-won.blog/sitemap.xml
+curl https://www.google.com/ping?sitemap=https://www.yu-won.blog/sitemap.xml

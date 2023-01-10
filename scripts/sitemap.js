@@ -13,7 +13,8 @@ const publicPath = `${process.cwd()}public`.replace("scripts", "");
 	const sitemapIndex = `
   ${pages
 		.map((page) => {
-			const path = `${url}${page.split(`dev-blog`)[2]}`;
+			const path = `${url}${page.split(`dev-blog/public`)[1]}`;
+
 			return `
       <sitemap>
         <loc>${path}</loc>

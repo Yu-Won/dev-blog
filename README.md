@@ -1,6 +1,6 @@
 # Yu-Won Blog
 
-Yu-Won,Ahn dev blog
+Yu-Won dev blog
 
 > 🐱 https://www.yu-won.blog/
 

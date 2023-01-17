@@ -12,10 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Open directory
-      - run: |
-        ls -la
-
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
@@ -27,6 +23,10 @@ jobs:
 
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Open directory
+        run: |
+        ls -la  
 
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}

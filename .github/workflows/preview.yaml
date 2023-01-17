@@ -10,7 +10,11 @@ jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: Open directory
+      - run: |
+        ls -la
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest

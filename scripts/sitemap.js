@@ -6,7 +6,6 @@ const getDate = new Date().toISOString();
 const url = "https://www.yu-won.blog";
 
 const publicPath = `${process.cwd()}public`.replace("scripts", "");
-console.log("path test", `${process.cwd()}`);
 
 (async () => {
 	const pages = await sync(`${publicPath}/sitemap/*.gz`);

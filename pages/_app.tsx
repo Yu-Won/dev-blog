@@ -38,18 +38,7 @@ type AppPropsWithLayout = AppProps & {
 
 const YuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
 	const { events } = useRouter();
-	useEffect(() => {
-		const handelRouteChange = (url: string) => {
-			pageview(url);
-		};
-
-		events.on("routeChangeComplete", handelRouteChange);
-		events.on("hashChangeComplete", handelRouteChange);
-
-		return () => {
-			events.off("routeChangeComplete", handelRouteChange);
-			events.off("hashChangeComplete", handelRouteChange);
-			console.log(`
+	console.log(`
        ,-.       _,---._ __  / \\
       /  )    .-'       \`./ /   \\
      (  (   ,'            \`/    /|
@@ -61,11 +50,22 @@ const YuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
        |  | (   |            | /
        )  |  \\  \`.___________|/
        \`--'   \`--'`);
-			console.log(
-				"%cฅ^•ﻌ•^ฅ About me:",
-				"color: #ffffff;",
-				"https://www.yu-won.blog/about",
-			);
+	console.log(
+		"%cฅ^•ﻌ•^ฅ About me:",
+		"color: #ffffff;",
+		"https://www.yu-won.blog/about",
+	);
+	useEffect(() => {
+		const handelRouteChange = (url: string) => {
+			pageview(url);
+		};
+
+		events.on("routeChangeComplete", handelRouteChange);
+		events.on("hashChangeComplete", handelRouteChange);
+
+		return () => {
+			events.off("routeChangeComplete", handelRouteChange);
+			events.off("hashChangeComplete", handelRouteChange);
 		};
 	}, [events]);
 

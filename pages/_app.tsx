@@ -37,7 +37,20 @@ type AppPropsWithLayout = AppProps & {
 };
 
 const YuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
-	const { events } = useRouter();
+	const { events, asPath } = useRouter();
+
+	// const storePathValues = () => {
+	// 	const storage = globalThis?.sessionStorage;
+
+	// 	if (!storage) return;
+	// 	const prevPath = storage.getItem("currentPath");
+	// 	storage.setItem("prePath", prevPath as string);
+	// 	storage.setItem("currentPath", globalThis.location.pathname);
+	// };
+
+	// useEffect(() => {
+	// 	storePathValues();
+	// }, [asPath]);
 
 	useEffect(() => {
 		const handelRouteChange = (url: string) => {

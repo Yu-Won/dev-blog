@@ -40,7 +40,7 @@ export const getStaticPaths = async () => {
 	const paths: { params: { page: string } }[] = [];
 
 	allPost
-		.filter((value, index) => (index / 3) % 1 === 0)
+		.filter((value, index) => (index / PAGE_COUNT) % 1 === 0)
 		.forEach((value, index) => {
 			paths.push({ params: { page: (index + 1).toString() } });
 		});

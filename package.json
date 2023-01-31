@@ -9,7 +9,7 @@
 		"postinstall": "husky install",
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable",
-		"vercel-deploy": "next build && next export"
+		"vercel-deploy": "next build && vercel deploy"
 	},
 	"dependencies": {
 		"@mdx-js/react": "^2.1.3",
@@ -34,7 +34,7 @@
 		"remark-toc": "^8.0.1",
 		"sharp": "^0.31.2",
 		"unist-util-visit": "^4.1.1",
-		"vercel": "^28.11.0",
+		"vercel": "^28.14.1",
 		"vfile": "^5.3.6"
 	},
 	"devDependencies": {

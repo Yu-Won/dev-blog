@@ -71,7 +71,7 @@ const YuWonDevBlog = ({ Component, pageProps }: AppPropsWithLayout) => {
        \`--'   \`--'`);
 		console.log(
 			"%cฅ^•ﻌ•^ฅ About me:",
-			"color: #ffffff;",
+			"color: #7b7bd8;",
 			"https://www.yu-won.blog/about",
 		);
 

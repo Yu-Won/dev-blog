@@ -26,16 +26,12 @@ module.exports = {
 						"code::after": {
 							content: '""',
 						},
-					},
-				},
-				dark: {
-					css: {
-						color: theme("colors.gray.300"),
-						h1: {
-							color: theme("colors.gray.100"),
-						},
-						h2: {
-							color: theme("colors.gray.100"),
+						code: {
+							backgroundColor: theme("colors.zinc.200/50"),
+							paddingTop: "0.125rem",
+							paddingBottom: "0.125rem",
+							borderRadius: "0.25rem",
+							color: theme("colors.violet.500/50"),
 						},
 					},
 				},

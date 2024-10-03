@@ -12,17 +12,22 @@ description: "github action reusable workflows 설정"
 ---
 
 ## Table of Contents
+- [기존 문제점](#기존-문제점)
 - [설정 방법](#설정-방법)
-  - [Reusable workflow](#reusable-workflow)
-  - [Caller workflow](#caller-workflow)
-  - [주의해야할 점](#주의해야할-점)
+- [Reusable workflow](#reusable-workflow)
+- [Caller workflow](#caller-workflow)
+- [주의해야할 점](#주의해야할-점)
 - [ref](#ref)
+
+### 기존 문제점
 
 > 이 글은 github action에 대한 지식을 전부 설명하지 않습니다.
 
 github action 으로 작성된 파이프라인을 보던 중 workflow 가 공통된 작업이 많았다. cloud에 업로드하는 경로, environment 만 다를 뿐 나머지 로직은 동일해서 해당 로직을 재사용 하는 방법을 알아봤다.
 
 ## 설정 방법
+---
+
 workflow 를 재사용하기 위해선 `reusable workflow` 와 `caller workflow` 를 구분해서 설정해야한다. `reusable workflow`는 단어 그대로 재사용이 가능한 workflow 인데, 공통된 로직을 해당 워크플로우에 작성하고 caller 에서는 가져다 쓰는 구조이다.
 
 #### Reusable workflow
@@ -119,5 +124,6 @@ jobs:
 4. `secrets: inherit` 키워드를 사용하면 해당 workflow에만 secrets이 전달된다. 만약 secrets 을 하위 `reusable workflow` 에 제한적으로 전달되길 원하거나 모든 workflow 에 전달하길 원할경우 해당 부분을 고려해야한다.
 
 ## ref
+---
 - https://docs.github.com/en/actions/sharing-automations/reusing-workflows
 

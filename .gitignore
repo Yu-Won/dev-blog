@@ -6,7 +6,6 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.pnp.*
 
 # jetbrains
 .idea/*
@@ -17,3 +16,5 @@
 # env
 .env*.*
 .vercel
+.pnp.cjs
+.pnp.loader.mjs

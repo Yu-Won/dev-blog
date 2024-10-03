@@ -3,7 +3,7 @@ title: "github action reusable workflows 설정하기"
 tags:
   - github action
 published: true
-date: 2024-10-26 16:46:12
+date: 2024-10-03 16:46:12
 description: "github action reusable workflows 설정"
 ---
 

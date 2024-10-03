@@ -16,5 +16,4 @@
 # env
 .env*.*
 .vercel
-.pnp.cjs
-.pnp.loader.mjs
+.pnp.*

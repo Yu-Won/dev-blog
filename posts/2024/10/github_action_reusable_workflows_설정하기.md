@@ -3,7 +3,7 @@ title: "github action reusable workflows 설정하기"
 tags:
   - github action
 published: true
-date: 2024-10-03 16:46:12
+date: 2024-10-04 11:28:12
 description: "github action reusable workflows 설정"
 ---
 
@@ -12,6 +12,7 @@ description: "github action reusable workflows 설정"
 ---
 
 ## Table of Contents
+
 - [기존 문제점](#기존-문제점)
 - [설정 방법](#설정-방법)
 - [Reusable workflow](#reusable-workflow)
@@ -26,18 +27,19 @@ description: "github action reusable workflows 설정"
 github action 으로 작성된 파이프라인을 보던 중 workflow 가 공통된 작업이 많았다. cloud에 업로드하는 경로, environment 만 다를 뿐 나머지 로직은 동일해서 해당 로직을 재사용 하는 방법을 알아봤다.
 
 ## 설정 방법
+
 ---
 
 workflow 를 재사용하기 위해선 `reusable workflow` 와 `caller workflow` 를 구분해서 설정해야한다. `reusable workflow`는 단어 그대로 재사용이 가능한 workflow 인데, 공통된 로직을 해당 워크플로우에 작성하고 caller 에서는 가져다 쓰는 구조이다.
 
 #### Reusable workflow
+
 `.github/workflows` 디렉토리 내에서만 지원하고 하위 디렉토리나 다른 디렉토리에선 지원하지 않으며 `on`에 필수적으로 `workflow_call` 을 명시적으로 선언해야 `reusable workflow` 로서 사용할 수 있다.
 
 ```yml
 on:
   workflow_call:
 ```
-
 
 만약 나처럼 업로드 하기 위한 경로나, 환경에만 차이가 있다면 해당 값만 props 처럼 받아서 사용하고 싶을 텐데 이런 설정은 `inputs` 이나 `secrets` 키워드를 이용해서 지원한다.
 
@@ -48,14 +50,14 @@ name: Reusable workflow
 
 on:
   workflow_call:
-    inputs: 
+    inputs:
       # 여기에 caller workflow 에 따라 달라지게 될 inputs을 입력한다.
       env:
         required: true
         type: string
         description: 'github action 실행 환경'
     secrets:
-	        
+
 
 jobs:
   build:
@@ -68,6 +70,7 @@ jobs:
 ```
 
 #### Caller workflow
+
 reusable workflow를 호출하는 workflow이다. 해당 workflow 내에서 `reusable workflow` 를 `uses` 키워드를 통해 호출한다.
 
 ```yml
@@ -86,8 +89,9 @@ jobs:
     with:
       env: dev
     # secrets은 다음과 같이 상속해서 참조할 수도 있다.
-    secrets: inherit    
+    secrets: inherit
 ```
+
 해당 파일을 보면 `reusable workflow` 가 같은 레포에 선언되어 있는걸 알수 있다. 위와 같이 설정할 경우 caller 와 reusable workflow는 동일한 커밋에서 호출된다.
 
 만약 `reusable workflow` 가 다른 레포에 있다면 다음과 같이 호출한다.
@@ -106,7 +110,7 @@ jobs:
     uses: owner_name/repo_name_b/.github/workflows/reusable-workflow.yml@main
     with:
       env: dev
-    secrets: inherit    
+    secrets: inherit
 ```
 
 해당 파일을 보면 다른 워크플로에서 호출되고 있음을 알 수 있으며, 마지막에 @main 옵션을 통해 main 브렌치에 있는 workflow를 호출한다.
@@ -124,6 +128,7 @@ jobs:
 4. `secrets: inherit` 키워드를 사용하면 해당 workflow에만 secrets이 전달된다. 만약 secrets 을 하위 `reusable workflow` 에 제한적으로 전달되길 원하거나 모든 workflow 에 전달하길 원할경우 해당 부분을 고려해야한다.
 
 ## ref
----
-- https://docs.github.com/en/actions/sharing-automations/reusing-workflows
 
+---
+
+- https://docs.github.com/en/actions/sharing-automations/reusing-workflows

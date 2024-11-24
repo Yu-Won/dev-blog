@@ -27,8 +27,6 @@ const PostPage = ({
 	slug: string;
 }) => {
 	const { title, tags, date, description } = post.frontMatter;
-	// const storage = globalThis?.sessionStorage;
-	// const link = storage?.getItem("currentPath") || "/";
 
 	return (
 		<div className="pt-16 pb-24 px-4 mx-auto prose dark:prose-invert mobile:prose-sm tablet:prose-base prose-h1:text-center prose-blockquote:not-italic prose-blockquote:font-normal prose-a:text-sky-600 dark:prose-code:text-purple-500 dark:prose-code:bg-[#0f141c]">

@@ -1,5 +1,5 @@
 ---
-title: "모듈 시스템 비교하기: CJS는 어떻게 등장하고 표준이 되었던걸까?"
+title: "모듈 시스템 비교하기: CJS는 어떻게 등장하고 표준이 되었던걸까"
 tags:
   - cjs
 published: true
@@ -194,8 +194,8 @@ Node.js에서는 ESM과 CommonJS를 함께 사용하는 프로젝트에서 `pack
 
 위와 같은 이유로 CommonJS 현재 old-style 모듈 시스템으로 취급되고 있으며 다양한 프로젝트들이 ESM 모듈 시스템으로 전환하고자 노력하고 있다. 다음과 같이 쉽게 마이그레이션 할 수 있도록 가이드를 제공하기도 한다.
 
-- https://github.com/tsmx/node-commonjs-to-esm
-- https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fdev.to%2F&source_ve_path=Mjg2NjQsMTY0NTAz&v=bgGQgSQSpI8&feature=youtu.be
+- [node-commonjs-to-esm](https://github.com/tsmx/node-commonjs-to-esm)
+- [Automatically upgrade from CommonJS to ESM with TS2ESM](https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fdev.to%2F&source_ve_path=Mjg2NjQsMTY0NTAz&v=bgGQgSQSpI8&feature=youtu.be)
 
 ---
 

@@ -51,8 +51,8 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
 	}, [page]);
 
 	return (
-		<div className="flex mx-auto items-center py-16 text-lg font-semibold space-x-6">
-			<div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
+        (<div className="flex mx-auto items-center py-16 text-lg font-semibold space-x-6">
+            <div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
 				<button
 					type="button"
 					role="button"
@@ -62,7 +62,7 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
 					<ChevronLeft />
 				</button>
 			</div>
-			<ul className="flex space-x-6">
+            <ul className="flex space-x-6">
 				{pageList.map((value) => (
 					<li
 						key={value}
@@ -70,11 +70,11 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
 							value === page && "text-indigo-600 dark:text-purple-800"
 						} hover:text-indigo-600 hover:dark:text-purple-800`}
 					>
-						<Link href={`${link}/${value}`}>{value}</Link>
+						<Link href={`${link}/${value}`} legacyBehavior>{value}</Link>
 					</li>
 				))}
 			</ul>
-			<div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
+            <div className="flex items-center hover:text-indigo-600 hover:dark:text-purple-800">
 				<button
 					type="button"
 					role="button"
@@ -84,8 +84,8 @@ const ListPagination = ({ link, page, totalCount }: IProps) => {
 					<ChevronRight />
 				</button>
 			</div>
-		</div>
-	);
+        </div>)
+    );
 };
 
 export default ListPagination;

@@ -33,3 +33,7 @@
 .code-line {
 	color: #e5e7eb;
 }
+
+.a {
+	word-break: break-word;
+}

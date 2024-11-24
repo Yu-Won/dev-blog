@@ -4,14 +4,15 @@ import { SiteConfig } from "utils/config";
 
 const Introduce = () => {
   return (
-    <div className="flex items-center text-center mobile:flex-row-reverse mobile:justify-center mobile:gap-7 mobile:pt-8 laptop:flex-col laptop:gap-0 laptop:py-8">
+    (<div className="flex items-center text-center mobile:flex-row-reverse mobile:justify-center mobile:gap-7 mobile:pt-8 laptop:flex-col laptop:gap-0 laptop:py-8">
       <div className="flex flex-col">
         <div className="pb-4">
           <span> Written by </span>
-          <Link href="/about">
-            <a className="underline underline-offset-2 text-indigo-600 dark:text-violet-400">
-              @{SiteConfig.author.name}
-            </a>
+          <Link
+            href="/about"
+            className="underline underline-offset-2 text-indigo-600 dark:text-violet-400">
+            @{SiteConfig.author.name}
+
           </Link>
         </div>
         <p>Hello World 👋</p>
@@ -26,7 +27,7 @@ const Introduce = () => {
           height={90}
         />
       </div>
-    </div>
+    </div>)
   );
 };
 

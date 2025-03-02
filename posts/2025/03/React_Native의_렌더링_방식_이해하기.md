@@ -4,7 +4,7 @@ tags:
   - react-native
 published: true
 date: 2025-03-02 19:64:23
-description: "virtaul DOM이 아니라"
+description: "앱에는 html, css가 없는데 어떻게 렌더링하는거지?"
 ---
 
 # React Native의 렌더링 방식 이해하기
